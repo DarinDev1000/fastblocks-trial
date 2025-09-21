@@ -5,8 +5,19 @@ from acb.depends import depends
 # Import adapters - these are pluggable components that FastBlocks uses
 # The Templates adapter handles rendering Jinja2 templates
 # The App adapter provides the FastBlocks application instance
+
 Templates = import_adapter("templates")  # Get the configured template adapter
 App = import_adapter("app")  # Get the configured app adapter
+
+# Templates = None
+# App = None
+
+# async def startup():
+#     global Templates, App
+#     adapters = await gather_imports(["templates", "app"])
+#     Templates = adapters["templates"]
+#     App = adapters["app"]
+# startup()
 
 
 # Define a route handler for the homepage
