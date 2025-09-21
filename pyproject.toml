@@ -5,5 +5,5 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "fastblocks>=0.15.1",
+    "fastblocks>=0.15",
 ]

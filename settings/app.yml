@@ -1,0 +1,9 @@
+app:
+  name: "MyFastBlocksApp"
+  title: "My First FastBlocks App"
+  debug: true
+
+# Configure session middleware
+session:
+  secret_key: "your-secret-key-here"  # In production, use a secure random key
+  max_age: 14400  # Session timeout in seconds (4 hours)

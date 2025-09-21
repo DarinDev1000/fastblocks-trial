@@ -833,7 +833,7 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "fastblocks", specifier = ">=0.15.1" }]
+requires-dist = [{ name = "fastblocks", specifier = ">=0.15" }]
 
 [[package]]
 name = "frozenlist"
