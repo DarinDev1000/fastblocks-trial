@@ -1,7 +1,29 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>[[ title ]]</title>  <!-- FastBlocks uses [[ ]] instead of {{ }} for variables -->
+
+    <!-- Include HTMX for interactivity without writing JavaScript -->
+    <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+</head>
 <body>
-<h1>FastBlocks Trial</h1>
-<p>Welcome to the FastBlocks trial application!</p>
+    <h1>[[ title ]]</h1>
+
+    <!--
+    HTMX attributes explained:
+    - hx-get: The URL to fetch when the element loads
+    - hx-trigger: When to trigger the request (on load in this case)
+    -->
+    <div hx-get="/block/counter" hx-trigger="load">
+        Loading counter...
+    </div>
+
+    <!--
+    - hx-post: Send a POST request to this URL when clicked
+    - hx-target: Update the previous div with the response
+    -->
+    <button hx-post="/block/counter" hx-target="previous div">
+        Increment
+    </button>
 </body>
 </html>
